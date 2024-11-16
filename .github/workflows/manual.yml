@@ -3,10 +3,12 @@ on:
   workflow_dispatch:
     inputs:
       greeting:
-        type: string
-        default: Hello
-        required: true
-        description: A cheerful word
+        type: choice
+        options:
+          - Hello
+          - Hi
+          - Hey
+        description: "Select a greeting"
 
 jobs:
   run:
